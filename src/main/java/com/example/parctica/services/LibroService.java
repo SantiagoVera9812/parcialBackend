@@ -43,6 +43,10 @@ public class LibroService {
         }
     }
 
+    public void eliminar(Libro libro){
+        libroRepository.delete(libro);
+    }
+
 
     
 }

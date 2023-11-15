@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -28,6 +29,12 @@ public class BibliotecaController {
         return trackService.listar();
 
     }
+
+     @DeleteMapping("/Borrar")
+    public void eliminar(@RequestBody Biblioteca biblioteca){
+        trackService.eliminar(biblioteca);
+    }
+
 
     @PostMapping("/Agregar")
     public Biblioteca insertar(@RequestBody BibliotecaDTO track){

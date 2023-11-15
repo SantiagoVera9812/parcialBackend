@@ -62,6 +62,10 @@ public class BibliotecaService {
 
         return trackDTOs;
     }
+
+    public void eliminar(Biblioteca biblioteca){
+        trackRepository.delete(biblioteca);
+    }
         
 }
     
